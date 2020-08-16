@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkModeBackground">
+
+    <RelativeLayout
+        android:id="@+id/chat_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/darkModeLighter"
+        android:padding="10dp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/avatarImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_alignTop="@id/avatarImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Марiчка"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/avatarImageView"
+            android:textSize="8pt"/>
+
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/last_message"
+            android:layout_below="@id/userNameTextView"
+            android:layout_alignLeft="@id/userNameTextView"
+            android:text="last message"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:visibility="invisible"
+            android:id="@+id/chat_user_message"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@color/mainColor"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

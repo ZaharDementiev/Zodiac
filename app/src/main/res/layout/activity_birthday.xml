@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdditionalRegistration.BirthdayActivity"
+    android:background="@drawable/registration_background">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:indeterminate="true"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        />
+
+    <TextView
+        android:id="@+id/myDateIs"
+        style="@style/BigTextViewStyle"
+        android:text="@string/my_birthday"
+        />
+    <TextView
+        style="@style/HintTextViewStyle"
+        android:id="@+id/birthdayHint"
+        android:layout_below="@id/myDateIs"
+        android:text="@string/my_birthday_hint"
+        />
+    <EditText
+        android:textColor="@color/white"
+        android:textColorHint="#D3D3D3"
+        android:id="@+id/myDate"
+        android:background="@drawable/bottom_stroke"
+        android:cursorVisible="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/birthdayHint"
+        android:textSize="10pt"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.2"
+        android:layout_marginHorizontal="30dp"
+        android:inputType="number"
+        android:hint="@string/birthday_hint_dmy"/>
+
+    <TextView
+        style="@style/ErrorTextViewStyle"
+        android:id="@+id/errorDate"
+        android:layout_below="@id/myDate"
+        android:text="Вам должно быть больше 18 лет"
+        android:visibility="invisible"
+        />
+
+    <Button
+        style="@style/ButtonRegisterStyle"
+        android:textColor="@drawable/change_text_color"
+        android:background="@drawable/custom_button_next"
+        android:id="@+id/dateNextButton"
+        android:text="@string/next_btn"
+        android:layout_below="@id/errorDate"
+ />
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn.SignInActivity"
+    android:background="@drawable/registration_background">
+
+    <TextView
+        android:id="@+id/registerAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/emailSignIn"
+        android:layout_marginBottom="20dp"
+        android:text="@string/policy_hint"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="5.5pt"
+        android:layout_marginHorizontal="30dp"
+        />
+
+<!--
+    <Button
+        android:id="@+id/googleSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/emailSignIn"
+        android:layout_marginBottom="20dp"
+        android:text="@string/enter_google"
+        android:gravity="center_horizontal"
+        android:textColor="@drawable/change_text_color_reversed"
+        android:textSize="7pt"
+        android:background="@drawable/custom_button_sign_in"
+        android:layout_marginHorizontal="30dp"
+        />
+!-->
+    <Button
+        android:id="@+id/emailSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/numberSignIn"
+        android:layout_marginBottom="20dp"
+        android:text="@string/enter_email"
+        android:gravity="center_horizontal"
+        android:textColor="@drawable/change_text_color_reversed"
+        android:textSize="7pt"
+        android:background="@drawable/custom_button_sign_in"
+        android:layout_marginHorizontal="30dp"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/numberSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/troubleSigningIn"
+        android:layout_marginBottom="20dp"
+        android:text="@string/enter_number"
+        android:gravity="center_horizontal"
+        android:textColor="@drawable/change_text_color_reversed"
+        android:textSize="7pt"
+        android:background="@drawable/custom_button_sign_in"
+        android:layout_marginHorizontal="30dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/troubleSigningIn"
+        android:layout_alignParentBottom="true"/>
+    <!--
+        android:layout_marginBottom="50dp"
+        android:text="@string/enter_errors"
+        android:gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:textSize="7pt"
+        !-->
+
+</RelativeLayout>

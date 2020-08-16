@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn.PhoneSignInActivity"
+    android:background="@drawable/registration_background">
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            style="@style/BigTextViewStyle"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/emailAndPassword"
+            android:text="@string/phone_password"
+            />
+
+        <TextView
+            style="@style/HintTextViewStyle"
+            android:id="@+id/emailHint"
+            android:text="@string/confirm_authorization"
+            android:layout_marginHorizontal="30dp"
+            />
+
+    <LinearLayout
+        android:id="@+id/phoneAuth"
+        android:layout_below="@id/myNumberIs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="30dp">
+
+        <com.hbb20.CountryCodePicker
+            app:ccp_arrowColor="@color/white"
+            app:ccpDialog_textColor="@color/black"
+            app:ccp_contentColor="@color/white"
+            android:id="@+id/ccpSign"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:ccp_defaultNameCode="US" />
+
+        <EditText
+            android:id="@+id/phoneTextSign"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="#D3D3D3"
+            android:background="@drawable/bottom_stroke"
+            android:hint="67 765 43 21"
+            android:textSize="10pt"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:maxLength="14"/>
+
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/passwordSignInEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="#D3D3D3"
+            android:background="@drawable/bottom_stroke"
+            android:hint="@string/register_password_hint"
+            android:textSize="9pt"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:layout_marginHorizontal="30dp"
+            android:padding="3dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            style="@style/ErrorTextViewStyle"
+            android:id="@+id/errorPasswordPhone"
+            android:text="@string/password_mismatch"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+    <Button
+        style="@style/ButtonRegisterStyle"
+        android:textColor="@drawable/change_text_color"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_button_next"
+        android:id="@+id/phoneSignInButton"
+        android:text="@string/next_btn"
+        android:layout_below="@id/layout"/>
+
+</RelativeLayout>

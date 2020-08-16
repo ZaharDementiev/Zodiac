@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdditionalRegistration.PhotosUploadActivity"
+    android:paddingHorizontal="30dp"
+    android:background="@drawable/registration_background">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:indeterminate="true"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        />
+
+
+    <TextView
+        style="@style/BigTextViewStyle"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/myPhotoIs"
+        android:text="@string/add_photo"
+        />
+
+    <LinearLayout
+
+        android:layout_marginVertical="120dp"
+        android:id="@+id/photoLayoutEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/photo_stroke_layout"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo1Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo1"
+                    android:layout_alignBottom="@id/photo1"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo1Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo1"
+                    android:layout_alignBottom="@id/photo1"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo2Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo2"
+                    android:layout_alignBottom="@id/photo2"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo2Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo2"
+                    android:layout_alignBottom="@id/photo2"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo3Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo3"
+                    android:layout_alignBottom="@id/photo3"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo3Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo3"
+                    android:layout_alignBottom="@id/photo3"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo4Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo4"
+                    android:layout_alignBottom="@id/photo4"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo4Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo4"
+                    android:layout_alignBottom="@id/photo4"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo5Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo5"
+                    android:layout_alignBottom="@id/photo5"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo5Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo5"
+                    android:layout_alignBottom="@id/photo5"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo6Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo6"
+                    android:layout_alignBottom="@id/photo6"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo6Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo6"
+                    android:layout_alignBottom="@id/photo6"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo7Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo7"
+                    android:layout_alignBottom="@id/photo7"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo7Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo7"
+                    android:layout_alignBottom="@id/photo7"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo8Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo8"
+                    android:layout_alignBottom="@id/photo8"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo8Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo8"
+                    android:layout_alignBottom="@id/photo8"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <ImageView
+                    android:id="@+id/photo9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_stroke" />
+
+                <ImageView
+                    android:id="@+id/photo9Add"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignEnd="@id/photo9"
+                    android:layout_alignBottom="@id/photo9"
+                    android:src="@drawable/add_icon"
+                    />
+                <ImageView
+                    android:id="@+id/photo9Del"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignStart="@id/photo9"
+                    android:layout_alignBottom="@id/photo9"
+                    android:src="@drawable/ic_action_delete"
+                    android:visibility="gone"
+                    />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        style="@style/ButtonRegisterStyle"
+        android:textColor="@drawable/change_text_color_reversed"
+        android:background="@drawable/custom_button_next_reversed"
+        android:id="@+id/nextButtonPhoto"
+        android:text="@string/next_btn"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

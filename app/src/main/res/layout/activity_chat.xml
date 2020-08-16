@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InnerWindows.ChatActivity"
+    android:background="@color/darkModeBackground"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/personRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/avatarChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/userNameChat"
+            android:layout_alignTop="@id/avatarChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Марiчка"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/avatarChat"
+            android:textSize="8pt"/>
+
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/onlineChat"
+            android:layout_below="@id/userNameChat"
+            android:layout_alignLeft="@id/userNameChat"
+            android:text="@string/online"/>
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/messagesListView"
+        android:layout_below="@id/personRelative"
+        android:layout_above="@id/chatScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/background_gray"
+
+        />
+
+    <ScrollView
+        android:id="@+id/chatScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <EditText
+            android:id="@+id/chatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:paddingHorizontal="15dp"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="@drawable/chat_edit_text"
+            />
+
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/sendMessageChat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/chatScrollView"
+        android:layout_alignEnd="@id/chatScrollView"
+        android:layout_alignTop="@id/chatScrollView"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_send_24"
+        android:visibility="visible"
+        />
+
+
+    <ImageButton
+        android:id="@+id/sendPhotoChat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/chatScrollView"
+        android:layout_alignStart="@id/chatScrollView"
+        android:layout_alignTop="@id/chatScrollView"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_insert_photo_24"
+        android:visibility="visible"
+        />
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@color/darkModeLighter">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp">
+            <ImageView
+                android:id="@+id/person_liked_photo1"
+                android:background="@drawable/advetisement_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/person_liked_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/person_liked_photo1"
+                android:layout_alignBottom="@id/person_liked_photo1"
+                android:text="Катя, 20"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gold_like_ads"
+                android:layout_centerInParent="true"
+                android:padding="30dp"
+                android:gravity="center"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp">
+            <ImageView
+                android:id="@+id/person_liked_photo2"
+                android:background="@drawable/advetisement_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:id="@+id/person_liked_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/person_liked_photo2"
+                android:layout_alignBottom="@id/person_liked_photo2"
+                android:text="Алина, 22"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gold_like_ads"
+                android:layout_centerInParent="true"
+                android:padding="30dp"
+                android:gravity="center"/>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

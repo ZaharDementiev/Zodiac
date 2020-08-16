@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationWindows.SendNotificationsActivity"
+    android:background="@drawable/registration_background">
+
+
+    <TextView
+        android:id="@+id/notificationsTextView"
+        style="@style/BigTextViewStyleEnd"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/notifications" />
+
+    <TextView
+        android:layout_below="@id/notificationsTextView"
+        style="@style/BigHintTextViewStyle"
+        android:id="@+id/emailHint"
+        android:text="@string/notifications_hint"
+        />
+
+    <Button
+
+        android:id="@+id/notificationActivateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/notNow"
+        android:layout_marginBottom="30dp"
+        android:text="@string/notifications_button"
+        android:gravity="center"
+        android:textColor="@drawable/change_text_color_reversed"
+        android:textSize="8pt"
+        android:background="@drawable/custom_button_reversed"
+        android:layout_marginHorizontal="30dp"
+        />
+
+    <TextView
+        android:id="@+id/notNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/not_now"
+        android:gravity="center_horizontal"
+        android:textColor="@color/gray"
+        android:textSize="7pt"/>
+
+</RelativeLayout>

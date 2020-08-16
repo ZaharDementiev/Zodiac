@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".InnerWindows.ProfileSettingsActivity"
+    android:background="@color/darkModeBackground"
+    android:scrollbars="none">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/saveSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="@string/save"
+        android:textColor="@color/mainColor"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        />
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@string/back"
+            android:textColor="@color/mainColor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginVertical="18dp"
+            />
+
+    <LinearLayout
+        android:id="@+id/premiumAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveSettingsButton"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:background="@drawable/next_button_background">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="@string/get_boost"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="12dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:background="@drawable/next_button_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/get_likes"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nameSettingsLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/premiumAds"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="15dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="17sp"
+            android:text="@string/profile_settings"
+            tools:ignore="RtlCompat"/>
+
+        <LinearLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/darkModeLighter"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="15dp"
+            android:layout_marginVertical="3dp">
+
+
+            <TextView
+                style="@style/settingsStyle"
+                android:id="@+id/emailSettings"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="@string/email"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+            <TextView
+                style="@style/settingsStyle"
+                android:id="@+id/emailSettingsTextView"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/gray"
+                android:text="marka@gmail.com"
+                android:textAlignment="textEnd"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/numberSettingsLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="15dp"
+            android:background="@color/darkModeLighter"
+            android:layout_marginVertical="3dp">
+
+
+            <TextView
+                style="@style/settingsStyle"
+                android:id="@+id/numberSettings"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="@string/number"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+            <TextView
+                style="@style/settingsStyle"
+                android:id="@+id/numberSettingsText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/gray"
+                android:text="+380671234567"
+                android:textAlignment="textEnd"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/passwordSettingsLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="15dp"
+            android:background="@color/darkModeLighter"
+            android:layout_marginVertical="3dp">
+
+
+            <TextView
+                style="@style/settingsStyle"
+                android:id="@+id/passwordSettings"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="@string/password"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+            <TextView
+                style="@style/settingsStyle"
+                android:id="@+id/passwordSettingsText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/gray"
+                android:inputType="textPassword"
+                android:text="город"
+                android:textAlignment="textEnd"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="15dp"
+            android:background="@color/darkModeLighter"
+            android:layout_marginVertical="3dp">
+
+            <TextView
+                android:id="@+id/turnOnGeo"
+                style="@style/settingsStyle"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/turn_on_geo"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <Switch
+                android:id="@+id/geoCheck"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:theme="@style/SCBSwitch"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/darkModeLighter"
+            android:layout_marginVertical="3dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="14dp"
+                android:paddingHorizontal="15dp"
+
+                >
+
+
+                <TextView
+                    style="@style/settingsStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/max_length"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat">
+
+                </TextView>
+                <TextView
+                    style="@style/settingsStyle"
+                    android:id="@+id/currentGeo"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:textColor="@color/mainColor"
+                    android:text="20км"
+                    android:textAlignment="textEnd"
+                    tools:ignore="RtlCompat">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                android:id="@+id/geoSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:corner_radius="5"
+                app:min_value="20"
+                app:max_value="150"
+                android:layout_marginHorizontal="15dp"
+                app:steps="1"
+                app:bar_color="@color/gray"
+                app:bar_highlight_color="@color/mainColor"
+                app:left_thumb_color="@color/mainColor"
+                app:left_thumb_color_pressed="@color/gray" />
+            
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/darkModeLighter"
+            android:layout_marginVertical="3dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="15dp"
+            >
+
+
+            <TextView
+                style="@style/settingsStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="@string/age_radius"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+            <TextView
+                style="@style/settingsStyle"
+                android:id="@+id/currentAge"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/mainColor"
+                android:text="18-23"
+                android:textAlignment="textEnd"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+        </LinearLayout>
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                android:id="@+id/ageSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:corner_radius="5"
+                app:min_value="18"
+                app:max_value="100"
+                app:steps="1"
+                android:layout_marginHorizontal="15dp"
+                app:bar_color="@color/gray"
+                app:bar_highlight_color="@color/mainColor"
+                app:left_thumb_color="@color/mainColor"
+                app:right_thumb_color="@color/mainColor"
+                app:left_thumb_color_pressed="@color/gray"
+                app:right_thumb_color_pressed="@color/gray"
+                />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/exitButton"
+        android:paddingVertical="14dp"
+        android:paddingHorizontal="15dp"
+        style="@style/settingsStyle"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:text="@string/exit"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat"
+        android:layout_marginVertical="3dp"
+        android:background="@color/darkModeLighter"/>
+
+        <TextView
+            android:id="@+id/deleteAccount"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="15dp"
+            style="@style/settingsStyle"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/delete_account"
+            android:textAlignment="textStart"
+            tools:ignore="RtlCompat"
+            android:layout_marginVertical="3dp"
+            android:background="@color/darkModeLighter"/>
+
+
+
+    
+</LinearLayout>
+</RelativeLayout>
+
+</ScrollView>

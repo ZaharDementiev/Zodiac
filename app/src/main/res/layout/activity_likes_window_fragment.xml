@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainWindows.LikesWindowFragment"
+    android:id="@+id/likes"
+    android:paddingHorizontal="15dp"
+    android:background="@color/darkModeLighter">
+    <LinearLayout
+        android:id="@+id/topLikes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_stroke_code">
+        <TextView
+            android:id="@+id/amountLikes"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/likes"
+            android:textSize="20sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/topSimilar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/top_asks"
+            android:textSize="20sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/gray_light"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/likeGoldRecyclerView"
+        android:layout_below="@id/topLikes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/goldAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLikes"
+        android:text="@string/gold_top_ads"
+        android:paddingHorizontal="30dp"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:paddingVertical="10dp"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/likeRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <TextView
+            android:text="@string/gold_advertisement"
+            style="@style/BigHintTextViewStyle"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <Button
+            style="@style/ButtonRegisterStyle"
+            android:textColor="@drawable/change_text_color"
+            android:background="@drawable/advetisement_button"
+            android:id="@+id/codeNextButton"
+            android:text="@string/who_likes"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

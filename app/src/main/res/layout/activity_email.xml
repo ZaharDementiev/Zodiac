@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration.PasswordActivity"
+    android:background="@drawable/registration_background"
+    >
+<LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true">
+
+    <TextView
+        style="@style/BigTextViewStyle"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/myEmailIs"
+        android:text="@string/my_email"
+        />
+
+    <TextView
+        style="@style/HintTextViewStyle"
+        android:id="@+id/emailHint"
+        android:text="@string/my_email_hint"
+        android:layout_marginHorizontal="30dp"
+
+        />
+
+    <EditText
+        android:id="@+id/registerEmailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="#D3D3D3"
+        android:background="@drawable/bottom_stroke"
+        android:hint="@string/register_email_hint"
+        android:textSize="9pt"
+        android:singleLine="true"
+        android:layout_marginHorizontal="30dp"
+        android:padding="5dp"
+        android:layout_marginBottom="3dp"/>
+
+    <TextView
+        android:id="@+id/errorEmail"
+        style="@style/ErrorTextViewStyle"
+        android:text="@string/exist_mail"
+        android:visibility="invisible"
+        />
+
+
+</LinearLayout>
+    <Button
+        style="@style/ButtonRegisterStyle"
+        android:textColor="@drawable/change_text_color"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_button_next"
+        android:id="@+id/emailNextButton"
+        android:text="@string/next_btn"
+        android:layout_below="@id/layout"/>
+
+</RelativeLayout>

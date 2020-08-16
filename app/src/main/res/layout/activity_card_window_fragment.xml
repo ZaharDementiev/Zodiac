@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainWindows.CardWindowFragment"
+    android:paddingHorizontal="15dp"
+    android:background="@color/darkModeBackground">
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/card_stack_view"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonsLayout"
+        />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:clickable="true"
+            android:visibility="invisible"
+            android:src="@drawable/undo"
+            app:civ_circle_background_color="@color/white"
+            style="@style/RoundSmallStyle"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dislikeCircleImageView"
+            android:clickable="true"
+            android:src="@drawable/cancel"
+            app:civ_circle_background_color="@color/darkModeLighter"
+            style="@style/RoundStyle"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:visibility="invisible"
+            android:clickable="true"
+            android:src="@drawable/star"
+            app:civ_circle_background_color="@color/white"
+            style="@style/RoundSmallStyle"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/likeCircleImageView"
+            android:clickable="true"
+            android:src="@drawable/favorite"
+            app:civ_circle_background_color="@color/darkModeLighter"
+            style="@style/RoundStyle"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:visibility="invisible"
+            android:clickable="true"
+            android:src="@drawable/person"
+            app:civ_circle_background_color="@color/white"
+            style="@style/RoundSmallStyle"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

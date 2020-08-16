@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration.PhoneNumberActivity"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/registration_background">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:indeterminate="true"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        />
+
+    <TextView
+        android:textColor="@color/white"
+        style="@style/BigTextViewStyle"
+        android:id="@+id/myNumberIs"
+        android:text="@string/my_number"
+
+       />
+
+    <LinearLayout
+        android:id="@+id/phoneAuth"
+        android:layout_below="@id/myNumberIs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="30dp">
+
+            <com.hbb20.CountryCodePicker
+                app:ccp_arrowColor="@color/white"
+                app:ccpDialog_textColor="@color/black"
+                app:ccp_contentColor="@color/white"
+            android:id="@+id/ccp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:ccp_defaultNameCode="US" />
+
+            <EditText
+            android:id="@+id/phoneText"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+                android:textColorHint="#D3D3D3"
+            android:background="@drawable/bottom_stroke"
+            android:hint="67 765 43 21"
+            android:textSize="10pt"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:maxLength="14"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/ErrorTextViewStyle"
+        android:id="@+id/errorPhone"
+        android:layout_below="@id/phoneAuth"
+        android:text="@string/number_error"
+        android:textColor="@color/error"
+        android:textSize="6pt"
+        android:visibility="invisible"
+        />
+
+    <Button
+        style="@style/ButtonRegisterStyle"
+        android:textColor="@drawable/change_text_color"
+        android:background="@drawable/custom_button_next"
+        android:id="@+id/nextButton"
+        android:text="@string/next_btn"
+        android:layout_below="@id/errorPhone"
+        />
+
+</RelativeLayout>
